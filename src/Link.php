@@ -12,7 +12,6 @@ use function array_reduce;
 use function gettype;
 use function in_array;
 use function is_array;
-use function is_null;
 use function is_object;
 use function is_scalar;
 use function is_string;
@@ -207,7 +206,7 @@ class Link implements EvolvableLinkInterface
      */
     private function validateAttributeValue($value, string $context): void
     {
-        if (! is_scalar($value) && ! is_array($value) && ! is_null($value)) {
+        if (! is_scalar($value) && ! is_array($value) && $value !== null) {
             throw new InvalidArgumentException(sprintf(
                 '%s expects the $value to be a PHP primitive, an array of strings or null; received %s',
                 $context,
