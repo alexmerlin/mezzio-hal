@@ -203,8 +203,7 @@ class Link implements EvolvableLinkInterface
     /**
      * @param mixed $value
      * @throws InvalidArgumentException If $value is neither a scalar, an array nor null.
-     * @throws InvalidArgumentException If $value is an array, but one or more values
-     *     is not a string.
+     * @throws InvalidArgumentException If $value is an array, but one or more values is not a string.
      */
     private function validateAttributeValue($value, string $context): void
     {
